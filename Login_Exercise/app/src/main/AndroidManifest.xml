@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="pankaj.com.tabsdemo" >
-
-    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
-    <uses-permission android:name="android.permission.READ_CONTACTS"></uses-permission>
+    package="com.first.admin.login_exercise" >
 
     <application
         android:allowBackup="true"
@@ -19,20 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <!--  Call Activity -->
-        <activity android:name=".CallActivity" />
-
-        <!--  Logs Activity -->
-        <activity android:name=".LogsActivity" />
-
-        <!--  Contact Activity -->
-        <activity android:name=".ContactsActivity" />
-
-        <!--  Contact Activity -->
-        <activity android:name=".ContactsDetails" />
-
-
     </application>
 
 </manifest>

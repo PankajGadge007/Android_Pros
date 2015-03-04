@@ -17,31 +17,29 @@ public class MainActivity extends TabActivity {
 
         //tabHost = (TabHost)findViewById(R.id.tabhost);
         tabHost = getTabHost();
-        //tabHost.getTabWidget();
-        //tabHost.getTabContentView();
 
-        // Tab for Photos
-        TabHost.TabSpec photospec = tabHost.newTabSpec("Photos");
+        // Tab for Call
+        TabHost.TabSpec callspec = tabHost.newTabSpec("Call");
         // setting Title and Icon for the Tab
-        photospec.setIndicator("Photos", getResources().getDrawable(R.drawable.icon_photos_tab));
-        Intent photosIntent = new Intent(this, PhotosActivity.class);
-        photospec.setContent(photosIntent);
+        callspec.setIndicator("Call", getResources().getDrawable(R.drawable.icon_photos_tab));
+        Intent photosIntent = new Intent(this, CallActivity.class);
+        callspec.setContent(photosIntent);
 
-        // Tab for Songs
-        TabHost.TabSpec  songspec = tabHost.newTabSpec("Songs");
-        songspec.setIndicator("Songs", getResources().getDrawable(R.drawable.icon_songs_tab));
-        Intent songsIntent = new Intent(this, SongsActivity.class);
-        songspec.setContent(songsIntent);
+        // Tab for Logs
+        TabHost.TabSpec  logsspec = tabHost.newTabSpec("Logs");
+        logsspec.setIndicator("Logs", getResources().getDrawable(R.drawable.icon_songs_tab));
+        Intent songsIntent = new Intent(this, LogsActivity.class);
+        logsspec.setContent(songsIntent);
 
-        // Tab for Videos
-        TabHost.TabSpec  videospec = tabHost.newTabSpec("Videos");
-        videospec.setIndicator("Videos", getResources().getDrawable(R.drawable.icon_videos_tab));
-        Intent videosIntent = new Intent(this, VideosActivity.class);
-        videospec.setContent(videosIntent);
+        // Tab for Contacts
+        TabHost.TabSpec  contactsspec = tabHost.newTabSpec("Contacts");
+        contactsspec.setIndicator("Contacts", getResources().getDrawable(R.drawable.icon_videos_tab));
+        Intent videosIntent = new Intent(this, ContactsActivity.class);
+        contactsspec.setContent(videosIntent);
 
         // Adding all TabSpec to TabHost
-        tabHost.addTab(photospec); // Adding photos tab
-        tabHost.addTab(songspec); // Adding songs tab
-        tabHost.addTab(videospec); // Adding videos tab
+        tabHost.addTab(callspec); // Adding call tab
+        tabHost.addTab(logsspec); // Adding logs tab
+        tabHost.addTab(contactsspec); // Adding contactS tab
     }
 }
