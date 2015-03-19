@@ -31,7 +31,14 @@ public class MainActivity extends ActionBarActivity implements OnMapReadyCallbac
         mapFragment.getMapAsync(this);
 
         googleMap = mapFragment.getMap();
-        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+
+        if (googleMap==null){
+            googleMap = mapFragment.getMap();
+            if (googleMap!=null){
+                googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+            }
+        }
+
 
         GPSTracker gpsTracker = new GPSTracker(this);
 
